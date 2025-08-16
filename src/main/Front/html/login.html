@@ -2,20 +2,30 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Login - TasksDoErickin</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="form-container">
-    <h1>Login</h1>
-    <input type="email" id="email" placeholder="E-mail">
-    <input type="password" id="senha" placeholder="Senha">
-    <div class="button-group">
-        <button onclick="login()">Entrar</button>
-        <button onclick="cancelar()">Cancelar</button>
+    <h1 class="titulo">Tasks do Erickin</h1>
+
+    <img src="../Img/ninjaSentado.png" alt="Ninja" class="imgNinja">
+
+    <div class="form-container">
+        <h1>Login</h1>
+
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="password" id="senha" placeholder="Senha">
+
+        <div class="button-group">
+            <button onclick="login()">Entrar</button>
+            <button onclick="cancelar()">Cancelar</button>
+        </div>
+
+        <p>Não tem conta? <a href="cadUsuario.html">Cadastre-se aqui</a></p>
     </div>
-    <p>Não tem conta? <a href="cadUsuario.html">Cadastre-se aqui</a></p>
-</div>
 
     <script src="../js/login.js"></script>
 </body>
