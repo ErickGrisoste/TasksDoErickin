@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/cadProjetos.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>Cadastro de Projeto</h2>
+        <form id="formProjeto">
+            <div class="form-group">
+                <label for="nome">Nome do Projeto</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="dataInicio">Data de Início</label>
+                <input type="date" id="dataInicio" name="dataInicio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataFim">Data de Fim</label>
+                <input type="date" id="dataFim" name="dataFim">
+            </div>
+
+            <div class="form-group" style="position: relative;">
+                <label for="criador">Criador</label>
+                <input type="text" id="criador" name="criador" placeholder="Digite o nome do usuário" autocomplete="off" required>
+                <ul id="sugestoes" class="sugestoes-lista"></ul>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn-salvar">Salvar</button>
+                <button type="button" class="btn btn-cancelar" onclick="window.location.href='telaInicial.html'">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/cadProjetos.js"></script>
+</body>
+</html>

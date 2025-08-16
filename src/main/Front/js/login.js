@@ -19,7 +19,7 @@ const API_BASE = "http://localhost:8080";
 
                 if (usuarioEncontrado) {
                     alert("Login realizado com sucesso!");
-                    window.location.href = "index.html";
+                    window.location.href = "telaInicial.html";
                 } else {
                     alert("E-mail ou senha inválidos!");
                 }
