@@ -30,3 +30,30 @@ li {
     padding: 8px;
     border-bottom: 1px solid #ddd;
 }
+
+
+.btn-ver{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    float: right;
+    margin-top: -10px;
+}
+
+.btn-ver:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.descricao {
+    background-color: #f8f9fa;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

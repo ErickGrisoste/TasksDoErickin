@@ -1,4 +1,5 @@
 const API_BASE = "http://localhost:8080";
+var idProjeto;
 
 // Função para buscar projetos
 async function fetchProjetos() {
@@ -11,15 +12,29 @@ async function fetchProjetos() {
     projetos.forEach(projeto => {
         const li = document.createElement("li");
 
-        li.innerHTML = `<strong> ${projeto.nome} </strong> <br> ${projeto.descricao}<br><br>
-            Criado por: <strong> ${projeto.criador.username} </strong>`;
+        li.innerHTML = `<strong>${projeto.nome}</strong> <br>
+            Criado por: <strong>${projeto.criador.username}</strong>
+            <button class="btn-ver" data-id="${projeto.id}">Ver mais</button>
+            <div class="descricao" style="display: none; margin-top: 5px;">
+                ${projeto.descricao || "Sem descrição"}
+            </div>`;
 
-        li.addEventListener("click", () => fetchTarefas(projeto.id));
         projetosList.appendChild(li);
     });
-}
 
-var teste = 0;
+    document.querySelectorAll(".btn-ver").forEach(botao => {
+        botao.addEventListener("click", () => {
+            const descricaoDiv = botao.nextElementSibling;
+            if (descricaoDiv.style.display === "none") {
+                descricaoDiv.style.display = "block";
+                botao.textContent = "Esconder";
+            } else {
+                descricaoDiv.style.display = "none";
+                botao.textContent = "Ver mais";
+            }
+        });
+    });
+}
 
 // Função para buscar tarefas de um projeto
 async function fetchTarefas(projetoId) {
@@ -31,20 +46,8 @@ async function fetchTarefas(projetoId) {
 
     tarefas.forEach(tarefa => {
         const li = document.createElement("li");
-
-        li.innerHTML = `${tarefa.nome} - <strong> ${tarefa.status} </strong> <br>
+        li.innerHTML = `${tarefa.nome} - <strong>${tarefa.status}</strong> <br>
             Responsável: ${tarefa.responsavel.username}`;
-
-        li.addEventListener("click", () => {
-            if(teste == 0){
-                li.innerHTML += `<p>${tarefa.descricao}</p>`;
-                teste = 1;
-            } else{
-                li.removeChild(li.lastChild);
-                teste = 0;
-            }
-
-          });
         tarefasList.appendChild(li);
     });
 }
