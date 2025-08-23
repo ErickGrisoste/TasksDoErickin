@@ -8,8 +8,8 @@
 
 /* Corpo da página */
 body {
-  background: #f4f6f9;
-  color: #333;
+  background-color: #121212;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -33,7 +33,6 @@ body {
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: bold;
-  color: #007bff;
 }
 
 /* Labels e inputs */
@@ -46,7 +45,7 @@ label {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #444;
+  color: #fff;
 }
 
 input,
@@ -80,31 +79,31 @@ textarea:focus {
   position: relative;
 }
 
-.sugestoes-lista {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1000;
+.sugestoes {
+    position: absolute;
+    top: 78px; /* distancia do input */
+    left: 0px;
+    width: 100%; /* mesma largura do input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000; /* pra ficar por cima de outros elementos */
+    display: none; /* começa escondido */
 }
 
-.sugestoes-lista li {
-  padding: 8px 12px;
-  cursor: pointer;
+.sugestao {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #121212;
 }
 
-.sugestoes-lista li:hover {
-  background-color: #f0f0f0;
+.sugestao:hover {
+    background: #f2f2f2;
 }
-
 
 /* Botões */
 .buttons {

@@ -24,7 +24,8 @@ async function fetchProjetos() {
 
     document.querySelectorAll(".btn-ver").forEach(botao => {
         botao.addEventListener("click", () => {
-            const descricaoDiv = botao.nextElementSibling;
+            const projetoId = botao.getAttribute("data-id");
+            window.location.href = `projetoDetalhes.html?id=${projetoId}`;
             if (descricaoDiv.style.display === "none") {
                 descricaoDiv.style.display = "block";
                 botao.textContent = "Esconder";
