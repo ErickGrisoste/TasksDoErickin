@@ -6,29 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Projeto</title>
     <link rel="stylesheet" href="../css/projetoDetalhes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1 id="projeto-nome">Carregando...</h1>
-        <p id="projeto-descricao"></p>
-        <p><strong>Início:</strong> <span id="projeto-data"></span></p>
 
-        <h2>Tarefas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Responsável</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody id="tarefas-lista">
-                <!-- preenchido pelo JS -->
-            </tbody>
-        </table>
+    <header>
+        <h1 class="titulo">TasksDoErickin</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div style="padding-top: 30px;">
+
+        <button class="btnVoltar" onclick="voltarTelaInicial()">
+            <img src="../Img/step-backward-white.png" alt="voltar" style="width: 40px; height: 40px;">
+        </button>
+
     </div>
+
+    <main style="padding-top: 10px;">
+        <div class="container">
+
+            <h1 id="projeto-nome">Carregando...</h1>
+            <p id="projeto-descricao"></p>
+
+            <div class="cabecalhoProjeto">
+                <p><strong>Criador:</strong> <span id="projeto-criador"></span></p>
+                <p><strong>Início:</strong> <span id="projeto-data-inicial"></span></p>
+                <p><strong>Fim:</strong> <span id="projeto-data-fim"></span></p>
+            </div>
+
+            <div class="cabecalhoListaDeTarefas">
+                <h2>Tarefas</h2>
+                <button id="addTarefa" class="btnAddTarefa" onclick="addTarefa()">+ Adicionar Tarefa</button>
+            </div>
+
+            <hr>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Responsável</th>
+                        <th>
+                            <button class="btnFiltroStatus">
+                                Status▼
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tarefas-lista">
+                    <!-- preenchido pelo JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal-overlay" id="meuModal" style="display: none;">
+            <div id="modal-content" class="modal-content" >
+               
+                <button class="close-btn" onclick="fecharModal()">✖</button>
+         
+            </div>
+        </div>
+    </main>
 
     <script src="../js/projetoDetalhes.js"></script>
 </body>

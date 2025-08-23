@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Cadastrar Tarefa</title>
   <link rel="stylesheet" href="../css/cadTarefas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
       <div class="form-group">
 
         <label for="descricao">Descrição</label>
-        <textarea id="descricao" name="descricao" required></textarea>
+        <textarea id="descricao" name="descricao" wrap="hard"  required></textarea>
 
       </div>
 
@@ -64,7 +65,7 @@
       </div>
 
       <button type="submit" class="btn btn-salvar">Salvar</button>
-      <button type="button" class="btn btn-cancelar" onclick="window.location.href='telaInicial.html'">Cancelar</button>
+      <button type="button" class="btn btn-cancelar" onclick="cancelar()">Cancelar</button>
 
     </form>
     

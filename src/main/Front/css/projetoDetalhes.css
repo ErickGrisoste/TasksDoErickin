@@ -1,7 +1,10 @@
+* {
+  font-family: "Quantico", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  margin: 0;
+  background: #121212;
+  margin: 20px;
   padding: 20px;
 }
 
@@ -11,7 +14,14 @@ body {
   background: #fff;
   padding: 20px 30px;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalhoListaDeTarefas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
 }
 
 h1 {
@@ -20,17 +30,15 @@ h1 {
 
 h2 {
   margin-top: 30px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 10px;
   border-bottom: 1px solid #ddd;
@@ -39,6 +47,7 @@ th, td {
 tr:hover {
   background-color: #f5f5f5;
 }
+
 
 /* Status cores */
 .status {
@@ -58,4 +67,193 @@ tr:hover {
 
 .status.CONCLUIDA {
   background: #5cb85c;
+}
+
+.cabecalhoProjeto {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.btnFiltroStatus {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 15.5px;
+  cursor: pointer;
+}
+
+.btnStatus {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btnStatus:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btnAddTarefa {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1.3em;
+}
+
+.btnAddTarefa:hover {
+  background-color: #509e50;
+  transform: scale(1.05);
+}
+
+.btnVoltar {
+  background-position: center;
+  background-color: #121212;
+  border: none;
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btnVoltar:hover {
+  transform: scale(1.07);
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3b3b3b;
+  width: 100vw;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* Alinha os itens na horizontal */
+  justify-content: right;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  transform: scale(1.2);
+}
+
+.titulo {
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+
+/* Estilo da caixinha modal */
+.modal-overlay {
+  display: none;
+  /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caixinha modal centralizada */
+.modal-content {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-content button {
+  cursor: pointer;
+}
+
+.painelStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.excluirTarefa {
+  display: flex;
+  justify-content: end;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #d9534f;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1em;
+}
+
+.excluirTarefa:hover {
+  background-color: #b84743;
+  transform: scale(1.05);
+}
+
+.alterarStatus {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1em;
+}
+
+.alterarStatus:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btnSair {
+  background-position: center;
+  background-color: white;
+  border: none;
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btnSair:hover{
+  transform: scale(1.07);
 }
