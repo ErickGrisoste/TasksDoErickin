@@ -19,12 +19,12 @@ O foco do projeto foi no **back-end**, com toda a lógica de CRUD e persistênci
 ### Front-end  
 - 🌐 **HTML5**  
 - 🎨 **CSS3**  
-- ⚡ **JavaScript (ES6)**  
+- ⚡ **JavaScript**  
 
 ---
 
 ## 📂 Estrutura do Projeto  
-
+```bash
 TasksDoErickin/
 │
 ├── backend/ (Java + Spring Boot)
@@ -41,6 +41,7 @@ TasksDoErickin/
 │ └── js/script.js
 │
 └── pom.xml (Dependências do Maven)
+```
 
 
 ---
